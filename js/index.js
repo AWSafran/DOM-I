@@ -82,8 +82,18 @@ const mainImg = document.querySelector("#middle-img");
 mainImg.src = siteContent["main-content"]["middle-img-src"];
 
 navText.forEach(x => x.style.color = "green");
+
+
 const newNavStarter = document.createElement('a');
 newNavStarter.textContent = "First Nav Item";
+newNavStarter.style.color = "blue";
 
-navText.prepend(newNavStarter);
+const lastNavItem = document.createElement('a');
+lastNavItem.textContent = "Last nav item";
+lastNavItem.style.color = "orange";
+
+const navOuter = document.querySelector("nav");
+
+navOuter.prepend(newNavStarter);
+navOuter.append(lastNavItem);
 
