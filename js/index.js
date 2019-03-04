@@ -95,5 +95,10 @@ lastNavItem.style.color = "orange";
 const navOuter = document.querySelector("nav");
 
 navOuter.prepend(newNavStarter);
-navOuter.append(lastNavItem);
+navOuter.appendChild(lastNavItem);
+
+getStartedButton.addEventListener('click', function(){
+  headerOne.textContent = "Thanks for clicking the button!";
+  navText.forEach(x => x.style.color = "yellow");
+})
 
